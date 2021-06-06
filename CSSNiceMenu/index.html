@@ -8,52 +8,42 @@
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="jquery.color.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function() {
-				
+
 				$('#menu-jquery li a').hover(
-				
+
 					function() {
-						
+
 						$(this).css('padding', '5px 15px')
-								 .animate({'paddingLeft'	: '25px', 
-											 'paddingRight'	: '25px', 
-											 'backgroundColor':'rgba(0,0,0,0.5)'}, 
+								 .animate({'paddingLeft'	: '25px',
+											 'paddingRight'	: '25px',
+											 'backgroundColor':'rgba(0,0,0,0.5)'},
 											 'fast');
-					}, 
-					
+					},
+
 					function() {
-						
+
 						$(this).css('padding', '5px 25px')
-								 .animate({'paddingLeft'	: '15px', 
-								 			'paddingRight'		: '15px', 
-								 			'backgroundColor' :'rgba(0,0,0,0.2)'}, 
+								 .animate({'paddingLeft'	: '15px',
+								 			'paddingRight'		: '15px',
+								 			'backgroundColor' :'rgba(0,0,0,0.2)'},
 								 			'fast');
-				
+
 				}).mousedown(function() {
-			
+
 					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.1)'}, 'fast');
 
 				}).mouseup(function() {
-				
+
 					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.5)'}, 'fast');
-				});				
+				});
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <div id="container">
 	<span class="title">Using Pure CSS Animation</span>
@@ -63,7 +53,7 @@
 		<li><a href="#">Portfolio</a></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
-	
+
 	<span class="title">Using jQuery Animation</span>
 	<ul id="menu-jquery">
 		<li><a href="#">Home</a></li>
@@ -72,17 +62,7 @@
 		<li><a href="#">Contact</a></li>
 	</ul>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

@@ -7,55 +7,45 @@
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function() {
-				
+
 				$('input[type=checkbox]').click(function() {
-					
+
 					thisCheckbox	= $(this);
-					
-					if(thisCheckbox.attr('checked')) 
+
+					if(thisCheckbox.attr('checked'))
 						thisCheckbox.attr('checked', '');
 					else
 						thisCheckbox.attr('checked', 'checked');
 				});
-				
+
 				$('table tr').click(function() {
-					
+
 					checkBox = $(this).children('td').children('input[type=checkbox]');
-					
+
 					if(checkBox.attr('checked'))
 						checkBox.attr('checked', '');
 					else
 						checkBox.attr('checked', 'checked');
 				});
-				
+
 				$('.check-all').click(function() {
-					
+
 					checkBox	= $('table tr').children('td').children('input[type=checkbox]');
-					
-					if($(this).attr('checked')) 
+
+					if($(this).attr('checked'))
 						checkBox.attr('checked', 'checked');
 					else
-						checkBox.attr('checked', '');		
+						checkBox.attr('checked', '');
 				});
-				
+
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 	<p class="title">jQuery : Checkbox & Table</p>
 	<table>
@@ -125,17 +115,7 @@
 			</td>
 		</tr>
 	</table>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

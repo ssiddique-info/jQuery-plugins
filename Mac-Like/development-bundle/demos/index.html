@@ -12,7 +12,7 @@
 										<script type="text/javascript" src="../ui/effects.shake.js"></script>
 																																												<script type="text/javascript">
 	jQuery(function($) {
-		
+
 		$('.left-nav a').click(function(ev) {
 			window.location.hash = this.href.replace(/.+\/([^\/]+)\/index\.html/,'$1') + '|default';
 			loadPage(this.href);
@@ -20,20 +20,20 @@
 			$(this).addClass('selected');
 			ev.preventDefault();
 		});
-		
+
 		if (window.location.hash) {
 			if (window.location.hash.indexOf('|') === -1) {
-				window.location.hash += '|default';	
-			}			
+				window.location.hash += '|default';
+			}
 			var path = window.location.href.replace(/(index\.html)?#/,'');
 			path = path.replace('\|','/') + '.html';
 			loadPage(path);
-		}		
+		}
 
-		function loadPage(path) {			
+		function loadPage(path) {
 			var section = path.replace(/\/[^\/]+\.html/,'');
 			var header = section.replace(/.+\/([^\/]+)/,'$1').replace(/_/, ' ');
-			
+
 			$('td.normal div.normal')
 				.empty()
 				.append('<h4 class="demo-subheader">Functional demo:</h4>')
@@ -49,7 +49,7 @@
 								$(this).click(function() {
 
 									resetDemos();
-									
+
 									$(this).parents('ul').find('li').removeClass('demo-config-on');
 									$(this).parent().addClass('demo-config-on');
 									$('#demo-notes').fadeOut();
@@ -68,8 +68,8 @@
 								$('#demo-config-menu a').each(function(){
 									if (this.href.indexOf(demo + '.html') !== -1) {
 										$(this).parents('ul').find('li').removeClass('demo-config-on');
-										$(this).parent().addClass('demo-config-on');									
-										loadDemo(this.href);										
+										$(this).parent().addClass('demo-config-on');
+										loadDemo(this.href);
 									}
 								});
 							}
@@ -85,10 +85,10 @@
 					.end()
 				.end()
 			;
-			
+
 			resetDemos();
 		}
-				
+
 		function loadDemo(path) {
 			var directory = path.match(/([^\/]+)\/[^\/\.]+\.html$/)[1];
 			$.get(path, function(data) {
@@ -108,7 +108,7 @@
 				$('#demo-link a').attr('href', path);
 				updateDemoNotes();
 				updateDemoSource(source);
-				
+
 				if (/default.html$/.test(path)) {
 					$.get("documentation/docs-" + path.match(/demos\/(.+)\//)[1] + ".html", function(html) {
 						$("#demo-source").after(html);
@@ -142,7 +142,7 @@
 			$('#demo-notes').show();
 			notes.hide();
 		}
-		
+
 		function updateDemoSource(source) {
 			if ($('#demo-source').length == 0) {
 				$('<div id="demo-source"><a href="#" class="source-closed">View Source</a><div><pre><code></code></pre></div></div>').insertAfter('#demo-notes');
@@ -158,46 +158,34 @@
 
 			$('#demo-source code').empty().text(cleanedSource);
 		}
-		
+
 		function resetDemos() {
 			$.datepicker.setDefaults($.extend({showMonthAfterYear: false}, $.datepicker.regional['']));
-			$(".ui-dialog-content").remove();			
+			$(".ui-dialog-content").remove();
 		}
-				
+
 	});
 	</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 
 <table class="layout-grid" cellspacing="0" cellpadding="0">
 	<tr>
 		<td class="left-nav">
 			<dl class="demos-nav">
 				<dt>Interactions</dt>
-					
-					
-					
-					
-					
+
+
+
+
+
 				<dt>Widgets</dt>
-					
-					
-					
-					
-					
-					
+
+
+
+
+
+
 				<dt>Effects</dt>
 					<dd><a href="addClass/index.html">Add Class</a></dd>
 					<dd><a href="removeClass/index.html">Remove Class</a></dd>
@@ -231,23 +219,13 @@
 					<p>
 						These demos showcase some common uses of each jQuery UI plugin. Simply copy and paste code from the demos to get started. Have fun playing with them.
 					</p>
-				
+
 			</div>
 
 		</td>
 	</tr>
 </table>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

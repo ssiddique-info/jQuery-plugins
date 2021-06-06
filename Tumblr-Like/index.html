@@ -5,104 +5,84 @@
 		<link rel="stylesheet" href="style/demo.css" type="text/css"/>
 		<script type="text/javascript" src="jquery-1.3.2.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function(){
-				
+
 				/* Define variable for paused element that shows when box element is being mouse over and for looping variable */
 				loop				= 1;
 				pausedLayer	= '<div class="paused">&nbsp;</div>';
-				
+
 				/* Create function for showing images */
-				showImages		= function() { 
-					
-					/* Define variable for image element and append its to box (with class .list-popular) */	
+				showImages		= function() {
+
+					/* Define variable for image element and append its to box (with class .list-popular) */
 					var image	= '<img src="images/sample'+loop+'.jpg" href="#" />';
 					$('.list-popular').prepend(image);
-					
-					
+
+
 					/* Increment loop value and if its more than or equal with 8 we redefine the value to 1 */
 					loop++;
-						
+
 					if(loop >= 8)
 						loop = 1;
-					
+
 					/* If each images on box were moused over we add class img-hover and if moused out we remove its class */
 					$('.list-popular img').hover(function() {
 						$(this).addClass('img-hover');
 					}, function() {
 						$(this).removeClass('img-hover');
 					});
-						
+
 				}
-				
+
 				/* Define function for mouse over */
 				mouseOver		= function() {
-					
+
 					/* Add pausedLayer to box element, add class img-opacity on each images and then stop appending image */
 					$(this).prepend(pausedLayer);
 					$(this).children('img').addClass('img-opacity');
 					clearInterval(rollImage);
-					
+
 					/* Unfortunately if we turn down the images opacity the images will overflow the box, so we must round again their corner */
 					$('.list-popular img:nth(0)').addClass('img-round-topleft');
 					$('.list-popular img:nth(4)').addClass('img-round-topright');
 					$('.list-popular img:nth(15)').addClass('img-round-bottomleft');
 					$('.list-popular img:nth(19)').addClass('img-round-bottomright');
 				}
-				
+
 				/* Define function for mouse out */
 				mouseOut			= function() {
-					
+
 					/* Remove paused layer, turn up opacity for each images and then start appending image */
 					$('div.paused').remove();
 					$(this).children('img').removeClass('img-opacity');
 					rollImage = setInterval(showImages, 1000);
-					
+
 					/* Remove rounded corner for each images */
 					$('.list-popular img').removeClass('img-round-topleft')
 												 .removeClass('img-round-topright')
 												 .removeClass('img-round-bottomleft')
 												 .removeClass('img-round-bottomtright');
 				}
-				
+
 				/* Fire up the showImages function for showing Images with distance time = 1000 millisecond */
 				rollImage = setInterval(showImages, 1000);
-				
+
 				/* Finally inject div list-popular with function mouseOver and mouseOut */
 				$('.list-popular').hover(mouseOver, mouseOut);
-				
-				
+
+
 			});
 
 		</script>
 	</head>
 	<body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 		<p class="title">ssiddique</p>
 		<div class="list-popular">
 		</div>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

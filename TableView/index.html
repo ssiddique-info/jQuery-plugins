@@ -8,12 +8,12 @@
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="jquery.cookie.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function() {
-				
+
 				//Read click event on each field
 				$('td').click(function() {
-					
+
 					thisIndex 	= $(this).index() + 1;
 					parentIndex	= $(this).parents('tr').index() + 1;
 
@@ -22,69 +22,69 @@
 
 					$(this).append('<div class="td-selected">Content Was Selected</div>');
 					$('.td-selected').fadeOut(1000);
-					
+
 				});
-				
+
 				//Button for All Content
 				$('.trigger-italic, .trigger-strong, .trigger-underline').toggle(function() {
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('td').addClass(className);
 					$(this).addClass('selected');
-				
+
 				},function() {
-					
-					
+
+
 					$(this).removeClass('selected');
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('td').removeClass(className);
-					
+
 				});
-				
+
 				//Button for Content in Column #2
 				$('.trigger-background-2, .trigger-right-2, .trigger-center-2').toggle(function() {
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('tr td:nth-child(2)').addClass(className);
 					$(this).addClass('selected');
-				
+
 				},function() {
-					
-					
+
+
 					$(this).removeClass('selected');
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('tr td:nth-child(2)').removeClass(className);
-					
+
 				});
-				
+
 				//Button for Content in Row #3
 				$('.trigger-background-23, .trigger-small-23, .trigger-big-23').toggle(function() {
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('tr:nth-child(4)').children('td').addClass(className);
 					$(this).addClass('selected');
-				
+
 				},function() {
-					
-					
+
+
 					$(this).removeClass('selected');
-					
+
 					className =	$(this).attr('class')+'-style';
-					
+
 					$('tr:nth-child(4)').children('td').removeClass(className);
-					
+
 				});
-				
+
 				//Button for Selected Content
 				$('.trigger-background-selected, .trigger-italic-selected, .trigger-center-selected').toggle(function() {
-					
+
 					className	=	$(this).attr('class')+'-style';
 					cookieTR		= $.cookie('parentIndex');
 					cookieTD		= $.cookie('thisIndex');
@@ -95,36 +95,26 @@
 					} else {
 						alert('Choose a content on a table first');
 					}
-				
+
 				},function() {
-					
-					
+
+
 					$(this).removeClass('selected');
-					
+
 					className =	$(this).attr('class')+'-style';
 					cookieTR		= $.cookie('parentIndex');
 					cookieTD		= $.cookie('thisIndex');
-					
+
 					$('tr:nth-child('+cookieTR+')').children('td:nth-child('+cookieTD+')').removeClass(className);
-					
+
 				});
-				
+
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 	<p class="title">Take Control of Your Table View</p>
 	<br/>
@@ -133,23 +123,23 @@
 		<span class="trigger-italic">italic</span>
 		<span class="trigger-strong">strong</span>
 		<span class="trigger-underline">underline</span>
-		
+
 		<span class="separator">&nbsp;</span>
-		
+
 		<label> Content in Column #2 : </label>
 		<span class="trigger-background-2">background</span>
 		<span class="trigger-center-2">center</span>
 		<span class="trigger-right-2">right</span>
-		
+
 		<span class="separator">&nbsp;</span>
-		
+
 		<label> Content in Row #3 : </label>
 		<span class="trigger-background-23">background</span>
 		<span class="trigger-big-23">big</span>
 		<span class="trigger-small-23">small</span>
-		
+
 		<span class="separator">&nbsp;</span>
-		
+
 		<label> Selected Content : </label>
 		<span class="trigger-background-selected">background</span>
 		<span class="trigger-italic-selected">italic</span>
@@ -217,17 +207,7 @@
 			</td>
 		</tr>
 	</table>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

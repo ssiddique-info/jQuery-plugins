@@ -7,73 +7,63 @@
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript">
-			
-			$(document).ready(function() {				
+
+			$(document).ready(function() {
 				$('#the-next').click(function() {
-					
+
 					slider			= $('#slider');
 					selectedItems	= slider.children('li.selected');
 					nextItem			= selectedItems.next('li');
 					nextItemImg		= nextItem.children('img');
-										
+
 					nextItemIndex	= nextItem.index() - 1;
 					nextItemPos		= 236 * nextItemIndex;
 					nextItemPos 	= -nextItemPos+'px';
-					
+
 					if(nextItem.is('li')) {
-						
+
 						slider.animate({"marginLeft" : nextItemPos});
-					
+
 						selectedItems.removeClass('selected');
 						nextItem.addClass('selected');
-						
+
 						$('#the-title').fadeOut(100, function() {
 							$(this).text(nextItemImg.attr('alt')).fadeIn();
 						});
 					}
-					
+
 				});
-				
+
 				$('#the-prev').click(function() {
-					
+
 					slider			= $('#slider');
 					selectedItems	= slider.children('li.selected');
 					prevItem			= selectedItems.prev('li');
 					prevItemImg		= prevItem.children('img');
-					
+
 					prevItemIndex	= prevItem.index() - 1;
 					prevItemPos		= 236 * -prevItemIndex;
 					prevItemPos 	= prevItemPos+'px';
 
 					if(prevItem.is('li')) {
 						slider.animate({"marginLeft" : prevItemPos});
-					
+
 						selectedItems.removeClass('selected');
 						prevItem.addClass('selected');
-						
+
 						$('#the-title').fadeOut(100, function() {
 							$(this).text(prevItemImg.attr('alt')).fadeIn();
 						});
 					}
 				});
 
-				
+
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <div id="container">
 	<div id="content">
@@ -104,17 +94,7 @@
 		<br/><br/>
 	</div>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

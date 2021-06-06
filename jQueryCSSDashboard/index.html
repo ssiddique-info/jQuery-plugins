@@ -9,68 +9,58 @@
 		<script type="text/javascript" src="jquery-animate-css-rotate-scale.js"></script>
 		<script type="text/javascript" src="jquery-css-transform.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function() {
-				
+
 				//Create base variable, check document width and count how much dot per line.
 				var a, b, element = '';
 				documentWidth		= $(window).width();
 				dotLength			= parseInt(documentWidth/10);
-				
+
 				//Loop dot per line
 				for(a=0; a<= 11; a++) {
-					
+
 					//Check is even or odd to add some pixel to the margin left
 					className= ((a%2) == 0) ? '0' : '0.4em';
 					element 	= element + '<div style="margin-left:'+className+'; margin-bottom: -.5em">\n';
-						
+
 						//Loop to create the dot
 						for(b=0; b<=dotLength; b++) {
 							element = element + '\t<span class="dot">&nbsp;</span>';
 						}
-					
+
 					element = element + '</div>';
 				}
-				
+
 				//Insert dots on #dot-container
 				$('#dot-container').html(element);
-				
+
 				//Add event toggle on #toggle
 				$('#toggle').toggle(
-					
+
 					function() {
-					
+
 						//Rotate toggle
 						$(this).stop().animate({rotate : '-=45deg'});
 						$('#dashboard').stop().animate({bottom : '0px'});
 						$('#dashboard-menu').stop().animate({left : '3em'});
 					},
-					
+
 					function() {
-						
+
 						//Revert rotate toggle
 						$(this).stop().animate({rotate : '0deg'});
 						$('#dashboard').stop().animate({bottom : '-150px'}, 700);
 						$('#dashboard-menu').stop().animate({left : '-65em'});
 					}
 				);
-				
+
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <span class="title">Create Your Own Dashboard Menu</span>
 <br/><br/>
@@ -108,17 +98,7 @@
 <span class="small-title">Hint : Click plus symbol below</span>
 <br/><br/><br/>
 <span class="small-title"><small><a href="http://www.webiconset.com/mobile-icon-set/" target="_blank"> icons by Web Icon Set </a></small></span>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

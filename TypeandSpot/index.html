@@ -3,30 +3,20 @@
 	<meta charset="UTF-8">
 	<title>Type and Spot with jQuery's :contains </title>
 	<meta name="description" content="Tutorial : Type and Spot with jQuery's :contains">
-	
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="demo.css?v=2">
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-	
+
+
 	<div id="content">
 		<h3>Tags Collection</h3>
-		
+
 		<input type="text" name="" size="30" value="Type to spot... (case sensitive)" id="searchbox"/>
-		
+
 		<ul class="list">
 			<li>Wordpress</li>
 			<li>CSS</li>
@@ -59,41 +49,31 @@
 	</div>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
 	<script type="text/javascript">
-		
+
 		$(document).ready(function() {
-	
+
 			$('#searchbox').keyup(function() {
-				
+
 				keyword = $(this).val();
 				$('.list li').removeClass('spot');
 				$('.list li:contains('+keyword+')').addClass('spot');
-				
+
 			}).focus(function() {
-			
-				if($(this).val() == 'Type to spot... (case sensitive)') 
+
+				if($(this).val() == 'Type to spot... (case sensitive)')
 					$(this).val('');
-			
+
 			}).blur(function() {
-				
-				if($(this).val() == '') 
+
+				if($(this).val() == '')
 					$(this).val('Type to spot... (case sensitive)');
 			});
-			
+
 		});
-		
+
 	</script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

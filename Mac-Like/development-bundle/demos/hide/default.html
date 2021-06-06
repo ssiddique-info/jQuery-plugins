@@ -23,34 +23,34 @@
 		#button { padding: .5em 1em; text-decoration: none; }
 		#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
 		#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
-		.ui-effects-transfer { border: 2px dotted gray; } 
+		.ui-effects-transfer { border: 2px dotted gray; }
 	</style>
 	<script type="text/javascript">
 	$(function() {
 
 		//run the currently selected effect
 		function runEffect(){
-			//get effect type from 
+			//get effect type from
 			var selectedEffect = $('#effectTypes').val();
-			
+
 			//most effect types need no options passed by default
 			var options = {};
 			//check if it's scale, transfer, or size - they need options explicitly set
 			if(selectedEffect == 'scale'){  options = {percent: 0}; }
 			else if(selectedEffect == 'transfer'){ options = { to: "#button", className: 'ui-effects-transfer' }; }
 			else if(selectedEffect == 'size'){ options = { to: {width: 200,height: 60} }; }
-			
+
 			//run the effect
 			$("#effect").hide(selectedEffect,options,500,callback);
 		};
-		
+
 		//callback function to bring a hidden box back
 		function callback(){
 			setTimeout(function(){
 				$("#effect:hidden").removeAttr('style').hide().fadeIn();
 			}, 1000);
 		};
-		
+
 		//set effect from select menu value
 		$("#button").click(function() {
 			runEffect();
@@ -61,18 +61,6 @@
 	</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 
 <div class="demo">
 
@@ -113,17 +101,6 @@
 
 </div><!-- End demo-description -->
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

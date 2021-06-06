@@ -8,89 +8,79 @@
 		<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				
+
 				defaultWidth	= 247; //pixels
 				transition		= 500; //millisecond
-				
+
 				function resetMargin(width) {
-						
+
 					divLeftMargin	= 0;
-				
+
 					$('.additional-block').each(function() {
-						
+
 						thisLeftMargin	= divLeftMargin + 'px';
-						
+
 						$(this).css('margin-left', thisLeftMargin);
-						
+
 						divLeftMargin	= divLeftMargin + width;
-						
+
 					});
 				}
-				
+
 				resetMargin(defaultWidth);
-				
+
 				$('.menu a').each(function() {
-					
+
 					thisHref	= $(this).attr('href');
-					
+
 					if($(thisHref).length > 0) {
 						$(this).addClass('has-child');
 					}
-					
+
 				});
-				
+
 				$('.menu a').click(function(event) {
-					
+
 					event.preventDefault();
-					
+
 					selectedDiv			= $(this).attr('href');
 					selectedMargin		= $(selectedDiv).css('margin-left');
 					selectedParent		= $(this).parents('.additional-block');
 					sliderMargin		= $('.slider').css('margin-left');
 					slidingMargin		= (parseInt(sliderMargin) - defaultWidth) + 'px';
-					
-					
+
+
 					if(selectedMargin.length > 0) {
-						
+
 						$(selectedDiv).children('.header').prepend('<span class="back"></span>').bind('click', function () {
-					
+
 							selectedParent	= $(this).parents('.additional-block');
 							sliderMargin	= - (parseInt(selectedParent.css('margin-left')) - defaultWidth) + 'px';
 							$('.slider').animate({marginLeft: sliderMargin}, transition);
-							
+
 						});
-							
+
 						if((parseInt(selectedMargin) - defaultWidth) >= defaultWidth) {
-						
+
 							selectedParent.after($(selectedDiv));
-							
+
 							resetMargin(defaultWidth);
-						
+
 							$('.slider').animate({marginLeft: slidingMargin}, transition);
-						
+
 						} else {
-						
+
 							$('.slider').animate({marginLeft: slidingMargin}, transition);
-					
+
 						}
 					}
 				});
-				
+
 			});
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <div class="info">
 How to create iPhone style navigation<br/><br/><br/>
@@ -309,17 +299,7 @@ How to create iPhone style navigation<br/><br/><br/>
 		</div>
 	</div>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

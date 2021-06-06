@@ -10,45 +10,45 @@
 		<script type="text/javascript" src="js/jquery-css-transform.js"></script>
 		<script>
 			$(document).ready(function() {
-				
+
 				var defaultWidth		= 247; //pixels
 				var transition			= 500; //millisecond
 				var verticalWidth		= 247; //pixels
 				var horizontalWidth	= 370; //pixels
-					
+
 				function resetMargin(width) {
-						
+
 					divLeftMargin	= 0;
-				
+
 					$('.additional-block').each(function() {
-						
+
 						thisLeftMargin	= divLeftMargin + 'px';
-						
+
 						$(this).css({'margin-left': thisLeftMargin});
-						
+
 						divLeftMargin	= divLeftMargin + width;
-							
+
 					});
 				}
-					
+
 				function resetSlider(width) {
-						
+
 					prevSiblings	= $('.selected').prevAll('.additional-block').length;
 					currentMargin	= - (prevSiblings * width);
-						
+
 					$('.slider').css('margin-left', currentMargin);
-						
+
 				}
-				
-				function checkChild() { 
-		
+
+				function checkChild() {
+
 					$('.menu a').each(function() {
-					
+
 						thisObj	= $(this);
 						thisLink	= thisObj.attr('rel');
-						
+
 						if(thisLink != '') {
-							
+
 							$.ajax({
    	 						url : thisLink,
 								async: false,
@@ -59,68 +59,68 @@
 						}
 					});
 				}
-					
+
 				function doAnimate(selectedDiv, selectedMargin, defaultWidth, slidingMargin) {
-					
-							
+
+
 					if((parseInt(selectedMargin) - defaultWidth) >= defaultWidth) {
-						
+
 						selectedParent.after($(selectedDiv));
-							
+
 						resetMargin(defaultWidth);
-						
+
 						$('.slider').animate({marginLeft: slidingMargin}, transition);
-						
+
 					} else {
 						$('.slider').animate({marginLeft: slidingMargin}, transition);
 					}
-							
+
 					$('.additional-block').removeClass('selected');
 					$(selectedDiv).addClass('selected').css('width', defaultWidth+'px');
 				}
-					
+
 				resetMargin(defaultWidth);
 				checkChild();
-				
+
 				$('.menu a').live('click', function(event) {
 
 					event.preventDefault();
-					
+
 					selectedDiv			= $(this).attr('href');
 					selectedPage		= $(this).attr('rel');
 					selectedMargin		= $(selectedDiv).css('margin-left');
 					selectedParent		= $(this).parents('.additional-block');
 					sliderMargin		= $('.slider').css('margin-left');
 					slidingMargin		= (parseInt(sliderMargin) - defaultWidth) + 'px';
-						
+
 					if($(selectedDiv).length > 0) {
-							
+
 						doAnimate(selectedDiv, selectedMargin, defaultWidth, slidingMargin);
-							
+
 					} else {
-						
+
 						if(selectedPage != '') {
-	
+
 							$.ajax({
 								url: selectedPage,
 								async: false,
 								success: function(html) {
-							
+
 									selectedParent.after(html);
 									resetMargin(defaultWidth);
 									checkChild();
-							
+
 									$(selectedDiv).children('.header').prepend('<span class="back"></span>').bind('click', function () {
-					
+
 										selectedParent	= $(this).parents('.additional-block');
 										sliderMargin	= - (parseInt(selectedParent.css('margin-left')) - defaultWidth) + 'px';
 										$('.slider').animate({marginLeft: sliderMargin}, transition);
-											
+
 										$('.additional-block').removeClass('selected');
 										$(selectedParent).prev('.additional-block').addClass('selected');
-							
+
 									});
-							
+
 									doAnimate(selectedDiv, selectedMargin, defaultWidth, slidingMargin);
 								}
 							});
@@ -129,11 +129,11 @@
 				});
 
 				$('#rotate').toggle(
-				
+
 					function() {
-					
+
 						$('#container').animate({rotate: '90deg'}, transition, function() {
-					
+
 							$('.binder').animate({
 													 rotate: '-90deg',
 													 height: verticalWidth+'px',
@@ -141,22 +141,22 @@
 													 marginLeft: '-3.9em',
 													 marginTop: '3.9em'
 													}, 500);
-					
+
 							$('.additional-block').animate({height: verticalWidth+'px', width: horizontalWidth+'px'}, transition, function() {
-						
+
 								resetMargin(horizontalWidth);
 								resetSlider(horizontalWidth);
 								defaultWidth = horizontalWidth;
-							
+
 							});
 						});
-					}, 
-					
+					},
+
 					function() {
-					
+
 						$('#container').animate({rotate: '0deg'}, transition, function() {
-					
-							
+
+
 							$('.binder').animate({
 													 rotate: '0deg',
 													 height: horizontalWidth+'px',
@@ -164,7 +164,7 @@
 													 marginLeft: '0em',
 													 marginTop: '0em'
 													}, 500);
-					
+
 							$('.additional-block').animate({height: horizontalWidth+'px', width: verticalWidth+'px'}, transition, function() {
 								resetMargin(verticalWidth);
 								resetSlider(verticalWidth);
@@ -177,17 +177,7 @@
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <div class="info">
 	iPhone Style Navigation : AJAX + Rotate<br/><br/><br/>
@@ -214,17 +204,7 @@
 	</div>
 	</div>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

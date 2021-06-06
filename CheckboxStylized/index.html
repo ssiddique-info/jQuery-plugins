@@ -8,49 +8,49 @@
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="jquery.backgroundPosition.js"></script>
 		<script>
-			
+
 			$(document).ready(function() {
-				
+
 				$('.iphone-style').live('click', function() {
-				
+
 					checkboxID		= '#' + $(this).attr('rel');
 
 					if($(checkboxID)[0].checked == false) {
-						
+
 						$(this).animate({backgroundPosition: '0% 100%'});
-						
+
 						$(checkboxID)[0].checked = true;
 						$(this).removeClass('off').addClass('on');
-						
+
 					} else {
-						
+
 						$(this).animate({backgroundPosition: '100% 0%'});
-						
+
 						$(checkboxID)[0].checked = false;
 						$(this).removeClass('on').addClass('off');
-						
+
 					}
 				});
-			
+
 				$('.firerift-style').live('click', function() {
-				
+
 					checkboxID		= '#' + $(this).attr('rel');
 
 					if($(checkboxID)[0].checked == false) {
-					
+
 						$(checkboxID)[0].checked = true;
 						$(this).removeClass('off').addClass('on');
-						
+
 					} else {
-						
+
 						$(checkboxID)[0].checked = false;
 						$(this).removeClass('on').addClass('off');
-						
+
 					}
 				});
-				
+
 				$('.iphone-style-checkbox, .firerift-style-checkbox').each(function() {
-					
+
 					thisID		= $(this).attr('id');
 					thisClass	= $(this).attr('class');
 
@@ -62,30 +62,20 @@
 							setClass = "firerift-style";
 						break;
 					}
-					
+
 					$(this).addClass('hidden');
-					
+
 					if($(this)[0].checked == true)
 						$(this).after('<div class="'+ setClass +' on" rel="'+ thisID +'">&nbsp;</div>');
 					else
 						$(this).after('<div class="'+ setClass +' off" rel="'+ thisID +'">&nbsp;</div>');
 				});
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <div id="container">
 
@@ -99,7 +89,7 @@
 	<label>Enable Right Click</label>
 	<input type="checkbox" id="sample-checkbox-3" class="iphone-style-checkbox" checked="checked" />
 	<p class="separator"></p>
-	
+
 	<br/>
 	<span class="title">Backup Preferences</span>
 	<label>Auto Backup Every 5 Days</label>
@@ -108,20 +98,10 @@
 	<label>Empty Cache Table Every Month</label>
 	<input type="checkbox" id="sample-checkbox-5" class="firerift-style-checkbox" checked="checked" />
 	<p class="separator"></p>
-	
+
 </div>
 <br/>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

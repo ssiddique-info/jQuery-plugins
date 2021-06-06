@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
@@ -7,60 +7,50 @@
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
 		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 		<script type="text/javascript">
-			
+
 			$(document).ready(function() {
-			
+
 				$('.menu li').click(function() {
-					
+
 					previousItem	= $(this).prevAll('li').length;
 					thisLength		= $(this).css('width');
 					thisTitle		= ($(this).attr('title') != "") ? $(this).attr('title') : "Title Example";
 					thisTitle		= thisTitle + '<br/><img src="images/pointer.png" />';
 					thisPadding		= parseInt($(this).css('padding-left')) + parseInt($(this).css('padding-right'));
 					navigatorSlide	= (parseInt(thisLength) + parseInt(thisPadding) + 3) * previousItem;
-					
+
 					$(this).parents('ul').prev('.navigator').html(thisTitle).animate({ marginLeft: navigatorSlide });
-					
+
 				});
-				
+
 				$('.menu-2 li').click(function() {
-					
+
 					previousItem	= $(this).prevAll('li').length;
 					thisLength		= $(this).css('width');
 					thisPadding		= parseInt($(this).css('padding-left')) + parseInt($(this).css('padding-right'));
 					navigatorSlide	= (parseInt(thisLength) + parseInt(thisPadding) + 4) * previousItem;
-					
+
 					$(this).parents('ul').prev('.navigator-2').animate({ marginLeft: navigatorSlide });
-					
+
 				});
-			
+
 				$('.menu-3 li').hover(function() {
-				
+
 					previousItem	= $(this).prevAll('li').length;
 					thisLength		= $(this).css('width');
 					thisPadding		= parseInt($(this).css('padding-left')) + parseInt($(this).css('padding-right'));
 					navigatorSlide	= (parseInt(thisLength) + parseInt(thisPadding) + 4) * previousItem;
-					
+
 					$(this).parents('ul').prev('.navigator-3').animate({ marginLeft: navigatorSlide }, 300);
-					
+
 				});
-				
+
 			});
-			
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <span class="title">Animated Navigation Menu</span>
 <br/><br/>
@@ -95,17 +85,7 @@
 		</ul>
 	</div>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

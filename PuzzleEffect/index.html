@@ -9,22 +9,22 @@
 		<script src="js/jquery-ui-1.7.2.custom.min.js"></script>
 		<script src="js/jquery.flip.min.js"></script>
 		<script type="text/javascript">
-		
+
 			$(document).ready(function() {
-				
+
 				var container			= $('#container');
 				var containerHeight	= parseInt(container.height())/100;
 				var containerWidth	= parseInt(container.width())/100;
 				var blockCount			= (containerHeight * containerWidth);
 
 				for(x = 1; x <= blockCount; x++) {
-					
+
 					randomNum			= Math.floor(Math.random()*4) + parseFloat(1);
 					container.append('<div class="block' + randomNum + '"></div>');
 				}
-				
+
 				$('#container div').addClass('black');
-				
+
 				var stack = {
 					'delay': 150,
 					'actions': [],
@@ -36,13 +36,13 @@
 					}
 				};
 
-				
+
 				$('#container div').each(function(){
 					var that = this;
 					stack.actions.push(function(){
 						$(that).flip({
 							color: '#ffffff',
-							speed: 70,	
+							speed: 70,
 							direction:'lr',
 							onEnd: function() {
 								$(that).removeClass('black');
@@ -52,38 +52,18 @@
 				});
 					stack.run();
 			});
-		
+
 		</script>
 </head>
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 <p class="title">Simple Flip Puzzle Effect with jQuery</p>
 <div id="container">
 </div>
 <br/>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>

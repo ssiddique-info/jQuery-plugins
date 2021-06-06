@@ -9,15 +9,15 @@
 		<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
 		<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
 		<script>
-			
+
 			$(document).ready(function() {
-				
+
 				myPassword 		= "ssiddique";
 				fieldPassword	= $('.field-password');
 				shieldPassword	= $('.the-password');
-				
+
 				$('.the-username').mouseover(function() {
-											if(shieldPassword.css('display') == "none") 
+											if(shieldPassword.css('display') == "none")
 												$(this).addClass('the-username-focus');
 										})
 										.mouseout(function() {
@@ -27,68 +27,58 @@
 											shieldPassword.slideDown();
 											fieldPassword.focus();
 										});
-				
+
 				$(document).keyup(function(e) {
-					
+
 					if(e.keyCode == 27){
-						
+
 						if(fieldPassword.attr('class') == "field-password")
 							shieldPassword.slideUp();
 					}
-					
+
 				});
-				
+
 				$('.the-form').submit(function() {
-					
+
 					if(fieldPassword.val() != myPassword) {
-						
+
 						options = {distance: 10, times: 2}
-						
+
 						$('.login').effect('shake', options, 35, function() {
 							fieldPassword.focus();
 						});
-						
-						
+
+
 					} else {
-					
+
 						fieldPassword.val('')
 										 .blur()
 										 .addClass('field-password-loading')
 										 .animate(	{backgroundPosition: "(0 0)"},
-														 1000, 
+														 1000,
 														 function() {
 														 	alert('Login Successfully, Now you can try again.');
 														 });
 					}
-					
+
 					return false;
-					
+
 				});
-				
+
 				$('.try-again').click(function() {
-					
+
 					shieldPassword.slideUp();
-					
+
 					fieldPassword.removeClass('field-password-loading')
 									 .animate( { backgroundPosition: "(-188px 0)" } );
-									 
+
 				});
 			});
-			
+
 		</script>
 	</head>
 	<body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 		<div id="container">
 			<div class="login">
@@ -124,17 +114,7 @@
 				</div>
 			</div>
 		</div>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8810347615083175"
-     data-ad-slot="9435784898"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
 <script>
