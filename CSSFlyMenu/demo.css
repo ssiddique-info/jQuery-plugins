@@ -1,0 +1,95 @@
+* { 
+	margin:0; padding:0; 
+}
+			
+body { 
+	font-family: Georgia;
+	background: #eaeaea;
+	text-align: center;
+	color: #464530;
+	text-shadow: 0px 1px 0px #fff;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-top: 5%;
+}
+
+a, a:visited {
+	color: #464530;
+	text-decoration: none; 
+}
+
+label {
+	font-size: 20px;
+}
+
+#content {
+	display: block;
+	width: 730px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}	
+
+.block {
+	font-size: 30px;
+	background: #eaeaea;
+	-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+	-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+	box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+	-webkit-border-radius: 3px;
+	padding: 40px 15px;
+}
+
+.cleaner {
+	clear: both;
+}
+
+#fly-menu, #fly-glow-menu {
+	margin: 1em auto 0 auto;
+}
+	
+	#fly-menu li, #fly-glow-menu li {
+		
+		/* Basic style */
+		list-style-type: none;
+		margin-right: .5em;
+		float: left;
+		font-size: 15px;
+		background: #cacaca;
+		padding: 10px;
+		cursor: pointer;
+		
+		/* Add shadow */
+		-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+		-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+		box-shadow: inset 0px 0px 10px rgba(0,0,0, .3);
+		
+		/* 
+			Add animation using transition 
+			-webkit : Safari & Chrome.
+			-moz : Firefox
+			-o : Opera
+		*/
+		-webkit-transition: .3s ease-in-out;
+  		-moz-transition: .3s ease-in-out;
+  		-o-transition: .3s ease-in-out;
+	}
+		
+		#fly-menu li img, #fly-glow-menu li img {
+			border: 0;
+		}
+	
+		#fly-menu li:hover {
+			margin-top: -1em;
+		}
+		
+		#fly-glow-menu li:hover {
+			
+			margin-top: -1em;
+			background: #fff;
+			
+			-webkit-box-shadow: 0px 0px 10px rgba(0,0,0, .3);
+			-moz-box-shadow: 0px 0px 10px rgba(0,0,0, .3);
+			box-shadow: 0px 0px 10px rgba(0,0,0, .3);
+		}

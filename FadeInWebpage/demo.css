@@ -1,0 +1,30 @@
+* { 
+	margin:0; padding:0; 
+}
+			
+body { 
+	font-family: Arial, Helvetica;
+	background: #d2d38a;
+	text-align: center;
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	letter-spacing: -4px;
+	margin-top: 10%;
+}
+
+#container {
+	display: block;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+	a, a:visited {
+		color: #000;
+		text-decoration: none;
+		text-shadow: 0px 1px 0px #bbb;
+	}
+	
+	a:hover {
+		border-bottom: 1px dotted #fff;
+	}

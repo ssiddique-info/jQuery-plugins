@@ -1,0 +1,52 @@
+* { 
+	margin:0; padding:0; 
+}
+			
+body { 
+	font-size: 100%; 
+	font-family: Arial, Helvetica;
+	background: #5c026a url('images/background.jpg') top left repeat-x;
+	text-align: center;
+	color: #fff;
+}
+
+#container {
+	display: block;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10%;
+}
+	
+	a.new-tab {
+		display: block;
+		float: left;
+		width: 398px;
+		height: 223px;
+		background: url('images/New-Tab.png') top left no-repeat;
+		text-indent: -500%;
+		cursor: pointer;
+	}
+		
+		a.new-tab:hover {
+			background-position: bottom left;
+		}
+	
+	a.current-tab {
+		display: block;
+		float: left;
+		width: 398px;
+		height: 223px;
+		background: url('images/Current-Tab.png') top left no-repeat;
+		text-indent: -500%;
+		cursor: pointer;
+	}
+		
+		a.current-tab:hover {
+			background-position: bottom left;
+		}
+	
+	a, a:visited {
+		color: #fff;
+		text-decoration: underline;
+	}

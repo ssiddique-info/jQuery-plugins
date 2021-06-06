@@ -1,0 +1,126 @@
+body {
+	text-align: center;
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 1.5em;
+	margin-top: 4%;
+	background: #eaeaea;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	background: #fff;
+	padding: 5em 5em 5em 8em;
+	text-align: center;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	
+}
+
+.title {
+	font-size: 30px;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+	text-shadow: 0px 2px 0px #fff;
+}
+
+.menu, .menu-2, .menu-3 {
+	display: block;
+	width: 500px;
+	position: relative;
+	text-align: left;
+}
+	
+	.navigator {
+		position: absolute;
+		width: 100px;
+		padding: 0 5px;
+		height: 20px;
+		top: -2.5em;
+		background: #000;
+		color: #fff;
+		-webkit-border-radius: 1em;
+		-moz-border-radius: 1em;
+		border-radius: 1em;
+		opacity: .8;
+		font-size: 11px;
+		text-align: center;
+	}
+	
+	.navigator-2 {
+		position: absolute;
+		width: 100px;
+		padding: 0 5px;
+		height: 5px;
+		bottom: 0;
+		background: url('images/pointer-white.png') bottom center no-repeat;
+	}
+	
+	.navigator-3 {
+		position: absolute;
+		width: 100px;
+		height: 29px;
+		padding: 0 5px;
+		bottom: 0;
+		opacity: .3;
+		background: url('images/background-strip.png');
+		-webkit-border-radius: 2em;
+		-moz-border-radius: 2em;
+	}
+
+	.menu ul, .menu-2 ul, .menu-3 ul {
+		margin: 0;
+		padding: 0;
+	}
+
+		.menu ul li {
+			cursor: pointer;
+			text-align: center;
+			display: inline-block;
+			width: 100px;
+			background: url('images/background-yellow.png');
+			padding: 5px;	
+			text-shadow: 0px 1px 0px #e4e4e4;
+			-webkit-border-radius: 2em;
+			-moz-border-radius: 2em;
+			border-radius: 2em;
+		}
+
+		.menu-2 ul li {
+			cursor: pointer;
+			text-align: center;
+			display: inline-block;
+			width: 100px;
+			background: url('images/background-red.png');
+			padding: 5px;	
+			color: #fff;
+			text-shadow: 0px 1px 0px #000;
+			-webkit-border-radius: 2em;
+			-moz-border-radius: 2em;
+			border-radius: 2em;
+		}
+
+		.menu-3 ul li {
+			cursor: pointer;
+			text-align: center;
+			display: inline-block;
+			width: 100px;
+			background: url('images/background-grey.png');
+			padding: 5px;	
+			text-shadow: 0px 1px 0px #d0d0d0;
+			-webkit-border-radius: 2em;
+			-moz-border-radius: 2em;
+			border-radius: 2em;
+		}
+
+a, a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #ccc000
+}

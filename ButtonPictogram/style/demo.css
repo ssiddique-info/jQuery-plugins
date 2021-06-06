@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+body {
+  margin-top: 3em;
+  text-align: center;
+  background: #f8fcd4;
+  background: -moz-radial-gradient(center, ellipse cover,  #f8fcd4 19%, #dbfacb 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(19%,#f8fcd4), color-stop(100%,#dbfacb));
+  background: -webkit-radial-gradient(center, ellipse cover,  #f8fcd4 19%,#dbfacb 100%);
+  background: -o-radial-gradient(center, ellipse cover,  #f8fcd4 19%,#dbfacb 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  #f8fcd4 19%,#dbfacb 100%);
+  background: radial-gradient(center, ellipse cover,  #f8fcd4 19%,#dbfacb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fcd4', endColorstr='#dbfacb',GradientType=1 );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#container {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+}
+
+h2, h3, small {
+  font-family: Arvo;
+  font-weight: normal;
+  font-size: 30px;
+  color: #7c7437;
+  text-transform: uppercase;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 20px;
+  text-transform: none;
+  padding: 10px;
+  border-radius: 3px;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+  h3:hover, h3.selected {
+    background: #7c7437;
+    color: #fff;
+  }
+
+
+small {
+ vertical-align: middle;
+}
+ 
+  small a {
+    font-size: 15px;
+    color: #7c7437;
+    text-decoration: none;
+    vertical-align: middle;
+    top: -5px;
+    position: relative;
+  }
+  
+  small a:hover {
+    text-decoration: underline;
+  }

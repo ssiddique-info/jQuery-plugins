@@ -1,0 +1,78 @@
+body {
+	text-align: center;
+	font-family: Georgia, Times;
+	font-style: italic;
+	font-size: 13px;
+	line-height: 1.5em;
+	margin-top: 10%;
+	background: #edeee8;
+	color: #4b4b4b;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	min-height: 100px;
+	background: #fff;
+	padding: 5em 5em 5em 8em;
+	text-align: center;
+	position: relative;
+}
+
+.title {
+	font-size: 40px;
+	padding-right: 1em;
+	line-height: 1.5em;
+	font-weight: bold;
+	text-shadow: 0px 2px 0px #fff;
+	text-align: right;
+}
+
+.title-2 {
+	font-size: 30px;
+	margin-left: 3em;
+	line-height: 1.5em;
+	font-weight: bold;
+	text-shadow: 0px 2px 0px #fff;
+	text-align: center;
+}
+
+.new {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	height: 108px;
+	width: 108px;
+	background: url('images/new.png') top left no-repeat;
+}
+
+.sticky {
+	position: absolute;
+	left: 6px;
+	top: 120px;
+	display: block;
+	height: 213px;
+	width: 218px;
+	background: url('images/sticky.png') top left no-repeat;
+}
+
+.get-pro {
+	position: absolute;
+	right: 0;
+	top: -21px;
+	display: block;
+	height: 185px;
+	width: 90px;
+	background: url('images/get-pro.png') top left no-repeat;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #4b4b4b;
+}
+
+a:hover {
+	border-bottom: 1px dotted #4b4b4b;
+}

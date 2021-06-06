@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Mask Your Input Forms and Make It Beauty </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('.too-plain').focus(function() {
+		
+					if($(this).val() == "Enter your email here")
+						$(this).val('');
+		
+				}).blur(function() {
+		
+					if($(this).val() == "")
+						$(this).val('Enter your email here');
+		
+				});
+				
+				$('.username-label, .password-label').animate({ opacity: "0.4" })
+					.click(function() {
+						var thisFor	= $(this).attr('for');
+						$('.'+thisFor).focus();
+				});
+			
+				$('.username').focus(function() {
+				
+					$('.username-label').animate({ opacity: "0" }, "fast");
+				
+						if($(this).val() == "username")
+							$(this).val() == "";
+		
+					}).blur(function() {
+				
+						if($(this).val() == "") {
+							$(this).val() == "username";
+							$('.username-label').animate({ opacity: "0.4" }, "fast");
+						}
+					});
+			
+				$('.password').focus(function() {
+				
+					$('.password-label').animate({ opacity: "0" }, "fast");
+				
+						if($(this).val() == "password") {
+							$(this).val() == "";
+						}
+					}).blur(function() {
+				
+						if($(this).val() == "") {
+							$(this).val() == "password";
+							$('.password-label').animate({ opacity: "0.4" }, "fast");
+						}
+				});
+				
+				$('.username-label-sliding, .password-label-sliding').animate({ opacity: "0.4" })
+					.click(function() {
+						var thisFor	= $(this).attr('for');
+						$('.'+thisFor).focus();
+				});
+			
+				$('.username-sliding').focus(function() {
+				
+					$('.username-label-sliding').animate({ marginLeft: "7em" }, "fast");
+				
+						if($(this).val() == "username")
+							$(this).val() == "";
+		
+					}).blur(function() {
+				
+						if($(this).val() == "") {
+							$(this).val() == "username";
+							$('.username-label-sliding').animate({ marginLeft: "12px" }, "fast");
+						}
+					});
+			
+				$('.password-sliding').focus(function() {
+				
+					$('.password-label-sliding').animate({ marginLeft: "7em" }, "fast");
+				
+						if($(this).val() == "password") {
+							$(this).val() == "";
+						}
+					}).blur(function() {
+				
+						if($(this).val() == "") {
+							$(this).val() == "password";
+							$('.password-label-sliding').animate({ marginLeft: "12px" }, "fast");
+						}
+				});
+				
+			});
+			
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<span class="title">Mask Your Input Forms and Make It Beauty</span>
+<br/><br/>
+<div id="container">
+<p class="separator"><br/></p>
+<p class="small-title">Too Plain</p>
+<input class="too-plain" value="Enter your email here" />
+<p class="separator"><br/></p>
+<p class="small-title">Fading The Label</p>
+<form>
+	<label class="username-label" for="username">Username</label>
+	<input type="text" name="username" class="username" />
+	<label class="password-label" for="password">Password</label>
+	<input type="password" name="password" class="password" />
+</form>
+<p class="separator"><br/></p>
+<p class="small-title">Sliding? Don't Worry</p>
+<form>
+	<label class="username-label-sliding" for="username-sliding">Username</label>
+	<input type="text" name="username" class="username-sliding" />
+	<label class="password-label-sliding" for="password-sliding">Password</label>
+	<input type="password" name="password" class="password-sliding" />
+</form>
+<p class="separator"><br/></p>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+* { 
+	margin:0; padding:0; 
+}
+			
+body {
+	text-align: center;
+	font-family: Georgia, Serif;
+	font-size: 13px;
+	line-height: 1.5em;
+	margin-top: 4%;
+	background: #eaeaea;
+}
+
+input {
+	padding: 7px;
+	border: 5px solid #e0e0e0;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+input:focus {
+	outline: none;
+}
+
+#container {
+	text-align: left;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.separator {
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 3em;
+}
+
+.title {
+	font-size: 30px;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0px 2px 0px #fff;
+}
+
+.small-title {
+	font-size: 20px;
+	margin-bottom: .5em;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0px 2px 0px #fff;
+}
+
+.username-label, .password-label,
+.username-label-sliding, .password-label-sliding {
+	position: absolute;
+	margin: 9px 9px 9px 12px;
+}
+
+
+a, a:visited, a:hover {
+	text-decoration: none;
+	color: #000;
+}

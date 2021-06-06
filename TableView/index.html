@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Take Control of Your Table View </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery.cookie.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				//Read click event on each field
+				$('td').click(function() {
+					
+					thisIndex 	= $(this).index() + 1;
+					parentIndex	= $(this).parents('tr').index() + 1;
+
+					$.cookie('thisIndex', thisIndex);
+					$.cookie('parentIndex', parentIndex);
+
+					$(this).append('<div class="td-selected">Content Was Selected</div>');
+					$('.td-selected').fadeOut(1000);
+					
+				});
+				
+				//Button for All Content
+				$('.trigger-italic, .trigger-strong, .trigger-underline').toggle(function() {
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('td').addClass(className);
+					$(this).addClass('selected');
+				
+				},function() {
+					
+					
+					$(this).removeClass('selected');
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('td').removeClass(className);
+					
+				});
+				
+				//Button for Content in Column #2
+				$('.trigger-background-2, .trigger-right-2, .trigger-center-2').toggle(function() {
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('tr td:nth-child(2)').addClass(className);
+					$(this).addClass('selected');
+				
+				},function() {
+					
+					
+					$(this).removeClass('selected');
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('tr td:nth-child(2)').removeClass(className);
+					
+				});
+				
+				//Button for Content in Row #3
+				$('.trigger-background-23, .trigger-small-23, .trigger-big-23').toggle(function() {
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('tr:nth-child(4)').children('td').addClass(className);
+					$(this).addClass('selected');
+				
+				},function() {
+					
+					
+					$(this).removeClass('selected');
+					
+					className =	$(this).attr('class')+'-style';
+					
+					$('tr:nth-child(4)').children('td').removeClass(className);
+					
+				});
+				
+				//Button for Selected Content
+				$('.trigger-background-selected, .trigger-italic-selected, .trigger-center-selected').toggle(function() {
+					
+					className	=	$(this).attr('class')+'-style';
+					cookieTR		= $.cookie('parentIndex');
+					cookieTD		= $.cookie('thisIndex');
+
+					if(cookieTD != null && cookieTR != null)  {
+						$('tr:nth-child('+cookieTR+')').children('td:nth-child('+cookieTD+')').addClass(className);
+						$(this).addClass('selected');
+					} else {
+						alert('Choose a content on a table first');
+					}
+				
+				},function() {
+					
+					
+					$(this).removeClass('selected');
+					
+					className =	$(this).attr('class')+'-style';
+					cookieTR		= $.cookie('parentIndex');
+					cookieTD		= $.cookie('thisIndex');
+					
+					$('tr:nth-child('+cookieTR+')').children('td:nth-child('+cookieTD+')').removeClass(className);
+					
+				});
+				
+			});
+			
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+	<p class="title">Take Control of Your Table View</p>
+	<br/>
+	<div id="controller">
+		<label> All Content : </label>
+		<span class="trigger-italic">italic</span>
+		<span class="trigger-strong">strong</span>
+		<span class="trigger-underline">underline</span>
+		
+		<span class="separator">&nbsp;</span>
+		
+		<label> Content in Column #2 : </label>
+		<span class="trigger-background-2">background</span>
+		<span class="trigger-center-2">center</span>
+		<span class="trigger-right-2">right</span>
+		
+		<span class="separator">&nbsp;</span>
+		
+		<label> Content in Row #3 : </label>
+		<span class="trigger-background-23">background</span>
+		<span class="trigger-big-23">big</span>
+		<span class="trigger-small-23">small</span>
+		
+		<span class="separator">&nbsp;</span>
+		
+		<label> Selected Content : </label>
+		<span class="trigger-background-selected">background</span>
+		<span class="trigger-italic-selected">italic</span>
+		<span class="trigger-center-selected">center</span>
+	</div>
+	<table>
+		<tr>
+			<th class="col-name">Name</th>
+			<th class="col-comment">Comment</th>
+			<th class="col-response">In Response To</th>
+		</tr>
+		<tr>
+			<td class="col-name">
+				<strong>waterbomm</strong><br/>
+				waterbomm.web.id/blog<br/>
+				117.102.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				bisa gw terapin untuk map yang gw buat gak ya, tapi harus ada parameternya untuk generate mapnya.. hiks..
+			</td>
+			<td class="col-response">
+			TinyTips : Another jQuery Plugin for Tooltip
+			</td>
+		</tr>
+		<tr>
+			<td class="col-name">
+				<strong>konyan</strong><br/>
+				ndakado<br/>
+				121.58.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				ko jadi gampang yea... sok tau mode ON.. hahaha
+			</td>
+			<td class="col-response">
+				EZ-CSS : Create Layout in No Time
+			</td>
+		</tr>
+		<tr>
+			<td class="col-name">
+				<strong>aduh</strong><br/>
+				116.xxx.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				saia juga kurang begitu yakin klo yg nulis ini mengerti, wkwkwkwk..
+			</td>
+			<td class="col-response">
+				[Code Snippet] Wordpress : Current Week Post
+			</td>
+		</tr>
+		<tr>
+			<td class="col-name">
+				<strong>ocha</strong><br/>
+				neng-ocha.com<br/>
+				114.xx.xx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				kewl!! +1 like this! :D
+			</td>
+			<td class="col-response">
+				iPhone-Style Navigation:AJAX + Rotate (Part II)
+			</td>
+		</tr>
+	</table>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>
+</html>

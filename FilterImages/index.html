@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Filter Image View Using jQuery</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('.menu li a').click(function() {
+					
+					
+					$('.menu li').removeClass('selected');
+					$(this).parent('li').addClass('selected');
+					
+					thisItem 	= $(this).attr('rel');
+					
+					if(thisItem != "all") {
+					
+						$('.item li[rel='+thisItem+']').stop()
+																.animate({'width' : '110px', 
+																			 'opacity' : 1, 
+																			 'marginRight' : '.5em', 
+																			 'marginLeft' : '.5em'
+																			});
+																			
+						$('.item li[rel!='+thisItem+']').stop()
+																.animate({'width' : 0, 
+																			 'opacity' : 0,
+																			 'marginRight' : 0, 
+																			 'marginLeft' : 0
+																			});
+					} else {
+						
+						$('.item li').stop()
+										.animate({'opacity' : 1, 
+													 'width' : '110px', 
+													 'marginRight' : '.5em', 
+													 'marginLeft' : '.5em'
+													});
+					}
+				})
+				
+				$('.item li img').animate({'opacity' : 0.5}).hover(function() {
+					$(this).animate({'opacity' : 1});
+				}, function() {
+					$(this).animate({'opacity' : 0.5});
+				});
+				
+			});
+			
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div id="container">
+	<span class="title">Filter Image View Using jQuery</span>
+	
+	<ul class="menu">
+		<li class="selected"><a href="#" rel="all">All Tutorial</a></li>
+		<li><a href="#" rel="jquery">jQuery Tutorial</a></li>
+		<li><a href="#" rel="css">CSS Tutorial</a></li>
+		<li><a href="#" rel="psd">Free PSD</a></li>
+	</ul>
+	
+	<ul class="item">
+		<li rel="jquery"><a href=#><img src="images/button.jpg" /></a></li>
+		<li rel="jquery"><a href=#><img src="images/codesnippet.jpg" /></a></li>
+		<li rel="css"><a href=#><img src="images/css.jpg" /></a></li>
+		<li rel="css"><a href=#><img src="images/css2.jpg" /></a></li>
+		<li rel="psd"><a href=#><img src="images/psd.jpg" /></a></li>
+		<li rel="jquery"><a href=#><img src="images/groovershark.png" /></a></li>
+		<li rel="css"><a href=#><img src="images/stylize.jpg" /></a></li>
+		<li rel="psd"><a href=#><img src="images/psd2.jpg" /></a></li>
+	</ul>
+	
+	<div class="cleaner"></div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>

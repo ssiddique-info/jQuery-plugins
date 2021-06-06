@@ -1,0 +1,241 @@
+@import url(http://fonts.googleapis.com/css?family=Trocchi);
+
+body {
+	margin-top: 5em;
+	background: #f9f5ed url('images/background.jpg');
+	text-align: center;
+	font-family: "Trocchi";
+}
+
+h1, em {
+	display: block;
+	font-size: 30px;
+	font-weight: normal;
+	margin: 2em auto;
+	color: #202020;
+}
+
+a {
+	color: #202020;
+	font-style: normal;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#container {
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+	input[type=radio] {
+		position: absolute;
+		z-index: 100;
+		opacity: 0;
+		cursor: pointer;
+		height: 110px;
+		width: 40px;
+		margin-top: -7em;
+	}
+
+	.control {
+		display: inline-block;
+		margin: 0 -.13em;
+		width: 40px;
+		background: #eddfc7;
+		padding: 5px 3px 1px 2px;
+		border-right: 1px solid #e0cba0;
+		cursor: pointer;
+		vertical-align: bottom;
+	}
+		
+		.control:hover, 
+		input[type=radio]:hover + .control, 
+		input[type=radio]:checked + .control {
+			box-shadow: inset 0px 0px 20px #d3b67a;
+		}
+	
+	.first {
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	
+	.last {
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-right: 0px;
+	}
+
+	#item-list {
+		margin-top: 2em;
+		padding: 0;
+		list-style-type: none;
+		text-align: left;
+	}
+	
+		#item-list li {
+			display: inline-block;
+			width: 300px;
+			vertical-align: top;
+			margin: 0 0.5em 1em 0;
+			padding: 10px;
+			background: #f3eada;
+			border-radius: 5px;
+			box-shadow: inset 0px 0px 20px #e0cba0;
+			overflow: hidden;
+		}
+			
+			#item-list li img {
+				display: inline-block;
+				vertical-align: top;
+				width: 100px;
+				margin-right: .5em;
+			}
+			
+			#item-list li p {
+				display: inline-block;
+				width: 180px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			#item-list .title, #item-list .developer {
+				display: block;
+				margin-bottom: .5em;
+			}
+			
+			#item-list .title {
+				font-size: 20px;
+			}
+			
+			#item-list .developer {
+				font-size: 12px;
+			}
+	
+	
+	/* Animation start here */
+		
+	.view-control-1:checked ~ #item-list li img {
+		opacity: 1;
+		width: 100px;
+		visibility: visible;
+		-webkit-transition: .4s .4s ease-out;
+		-moz-transition: .4s .4s ease-out;
+		-ms-transition: .4s .4s ease-out;
+		-o-transition: .4s .4s ease-out;
+		transition: .4s .4s ease-out;
+	}
+		
+	.view-control-1:checked ~ #item-list li p {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+	
+	.view-control-1:checked ~ #item-list li {
+		width: 300px;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+		
+	.view-control-2:checked ~ #item-list li img {
+		opacity: 0;
+		width: 0;
+		visibility: hidden;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+		
+	.view-control-2:checked ~ #item-list li p {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+	
+	.view-control-2:checked ~ #item-list li {
+		width: 900px;
+		-webkit-transition: .4s .4s ease-out;
+		-moz-transition: .4s .4s ease-out;
+		-ms-transition: .4s .4s ease-out;
+		-o-transition: .4s .4s ease-out;
+		transition: .4s .4s ease-out;
+	}		
+		
+	.view-control-3:checked ~ #item-list li img {
+		opacity: 1;
+		width: 100;
+		visibility: visible;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+		
+	.view-control-3:checked ~ #item-list li p {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+	
+	.view-control-3:checked ~ #item-list li {
+		width: 900px;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}		
+		
+	.view-control-4:checked ~ #item-list li img {
+		opacity: 1;
+		width: 100;
+		visibility: visible;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}	
+		
+	.view-control-4:checked ~ #item-list li p {
+		opacity: 0;
+		position: absolute;
+		visibility: hidden;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}
+	
+	.view-control-4:checked ~ #item-list li {
+		width: 100px;
+		-webkit-transition: .4s ease-out;
+		-moz-transition: .4s ease-out;
+		-ms-transition: .4s ease-out;
+		-o-transition: .4s ease-out;
+		transition: .4s ease-out;
+	}		

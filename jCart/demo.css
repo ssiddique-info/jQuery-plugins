@@ -1,0 +1,162 @@
+* { 
+				margin:0; padding:0; 
+			}
+			
+			body { 
+				font-size: 70%; 
+				font-family: Arial, Helvetica;
+				background: #f4f4f4;
+			}
+			
+			#sidebar {
+				display: block;
+				height: 235px;
+				background: url('images/Design_01.png') top left repeat-x;
+				margin-bottom: 1em;
+			}
+			
+			#content {
+				margin-left: 2em;
+			}
+			
+			h2.title { 
+				font-size: 250%;
+				margin-bottom: .2em;
+				padding-top: .5em; 
+				color: #fff;
+				text-shadow: 0px 2px 0px #000;
+				margin-left: 10px;
+			}
+			
+			.cart-wrapper-left {
+				margin-left: 10px;
+				display: block;
+				height: 146px;
+				width: 12px;
+				float: left;
+				background: url('images/Design_03.png') top left no-repeat;
+			}
+			
+			.cart-wrapper-center {
+				display: block;
+				height: 146px;
+				min-width: 150px;
+				float: left;
+				background: url('images/Design_05.png') top left repeat-x;
+			}
+			
+			.cart-wrapper-right {
+				display: block;
+				height: 146px;
+				width: 12px;
+				float: left;
+				background: url('images/Design_07.png') top left no-repeat;
+			}
+			
+			#jcart .item {
+				margin-top: 1em;
+				margin-right: 1em;
+				display: block;
+				float: left;
+				width: 147px;
+				height: 110px;
+				background: #fff;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				padding: 5px;
+				text-align: center;
+				position: relative;
+			}
+			
+			#jcart .remove {
+				position: absolute;
+				margin-top: -1em;
+				margin-left: -1em;
+				cursor: pointer;
+			}
+			
+			#jcart .item-title, #jcart .item-cost {
+				display: block;
+				font-size: 200%;
+				margin-bottom: .5em;
+				text-shadow: 0px 2px 0px #eaeaea;
+			}
+			
+			#jcart .item-qty input {
+				padding: 5px 10px;
+			}
+			
+			.button-checkout {
+				position: absolute;
+				top: 16.5em;
+				left: 23em;
+			}
+			
+			#jcart-paypal-checkout {
+				position: absolute;
+				top: 15.5em;
+				left: 23em;
+			}
+			
+			.item-counter {
+				position: absolute;
+				top: 17em;
+				color: #fff;
+				text-shadow: 0px 2px 0px #000;
+			}
+			
+			#jcart-subtotal {
+				position: absolute;
+				top: 17em;
+				margin-left: 12em;
+				color: #fff;
+				text-shadow: 0px 2px 0px #000;
+			}
+			
+			.jcart { 
+				margin-top: 1em;
+				margin-right: 1em;
+				display: block;
+				float: left;
+				width: 147px;
+				height: 139px;
+				background: url('images/Designs_03.png') top left no-repeat;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				padding: 5px;
+				text-align: center;
+				position: relative;
+			}
+			
+			.jcart ul { 
+				margin:0; 
+				list-style:none; 
+				padding:1em 20px; 
+				text-align:left; 
+			}
+			
+			.jcart ul li {
+				padding: 2px;
+				color: #000000;
+				font-size: 120%;
+				text-shadow: 0px 1px 0px #fff;
+			}
+			
+			.jcart fieldset { 
+				border:0; 
+				text-align: center;
+			}
+			
+			.slider {
+				position: relative;
+			}
+
+			#paypal-button { 
+				display:block; 
+				padding:10px; 
+				margin:20px auto; 
+			}
+
+			.clear { 
+				clear:both; 
+			}

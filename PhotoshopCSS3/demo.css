@@ -1,0 +1,409 @@
+* { 
+	margin:0; padding:0; 
+}
+			
+body { 
+	font-family: Georgia;
+	background: #f2f2ea;
+	text-align: center;
+	color: #464530;
+	text-shadow: 0px 1px 0px #fff;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-top: 3%;
+}
+
+a, a:visited {
+	color: #464530;
+	text-decoration: none; 
+}
+
+label {
+	font-size: 20px;
+}
+
+#content {
+	display: block;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}	
+
+/* Buttons */
+
+.button-red {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+	background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1px;
+	cursor: pointer;
+	text-align: center;
+}
+	
+	.button-red:hover {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,105,105)), color-stop(1, rgb(213,13,13)));
+		background : -moz-linear-gradient(center top, rgb(255,105,105) 25%, rgb(213,13,13) 100%);
+	}
+	
+	.button-red:active {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+		background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+	}
+	
+	.button-red-inner {
+		display: inline-block;
+		width: 200px;
+		padding-top: 4%;
+		font-size: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-top: 1px solid rgba(255, 255, 255, 0.6);
+		color: #fff;
+		text-shadow: 0px 1px 0px #6c0909;
+	}
+
+.button-grey {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(201,201,201)), color-stop(1, rgb(175,175,175)));
+	background : -moz-linear-gradient(center top, rgb(201,201,201) 25%, rgb(175,175,175) 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1px;
+	cursor: pointer;
+	text-align: center;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+	box-shadow:  0px 1px 2px rgba(0,0,0, 0.5);
+	position: relative;
+}	
+
+	.button-grey:hover {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(220,220,220)), color-stop(1, rgb(175,175,175)));
+		background : -moz-linear-gradient(center top, rgb(220,220,220) 25%, rgb(175,175,175) 100%);
+	}
+
+	.button-grey:active {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(201,201,201)), color-stop(1, rgb(175,175,175)));
+		background : -moz-linear-gradient(center top, rgb(201,201,201) 25%, rgb(175,175,175) 100%);
+	}
+		
+	.square-grey-shade {
+		top: 0;
+		display: inline-block;
+		position: absolute;
+		width: 200px;
+		height: 25px;
+		margin-top: 2px;
+		background: rgba(255, 255,255, .2);
+	}
+	
+	.button-grey-inner {
+		display: inline-block;
+		width: 200px;
+		padding-top: 4%;
+		font-size: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-top: 1px solid rgba(255, 255, 255, 0.6);
+		color: #4a4a4a;
+		text-shadow: 0px 1px 0px #fff;
+	}
+		
+/* Squares */
+
+.square-red {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+	background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1px;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+}
+	
+	.square-red:hover {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,105,105)), color-stop(1, rgb(213,13,13)));
+		background : -moz-linear-gradient(center top, rgb(255,105,105) 25%, rgb(213,13,13) 100%);
+	}
+	
+	.square-red:active {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+		background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+	}
+
+.square-blue {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(71, 181, 255)), color-stop(1, rgb(0,133,222)));
+	background : -moz-linear-gradient(center top, rgb(71, 181, 255) 25%, rgb(0,133,222) 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1px;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+	box-shadow:  0px 1px 2px rgba(0,0,0, 0.5);
+}
+	
+	.square-blue:hover {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(108, 196, 255)), color-stop(1, rgb(0,133,222)));
+		background : -moz-linear-gradient(center top, rgb(108, 196, 255) 25%, rgb(0,133,222) 100%);
+	}
+	
+	.square-blue:active {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(71, 181, 255)), color-stop(1, rgb(0,133,222)));
+		background : -moz-linear-gradient(center top, rgb(71, 181, 255) 25%, rgb(0,133,222) 100%);
+	}
+
+.square-pink {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255, 71, 206)), color-stop(1, rgb(234, 0, 172)));
+	background : -moz-linear-gradient(center top, rgb(255, 71, 206) 25%, rgb(234, 0, 172) 100%);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1px;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+}
+	
+	.square-pink:hover {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255, 124, 220)), color-stop(1, rgb(234, 0, 172)));
+		background : -moz-linear-gradient(center top, rgb(255, 124, 220) 25%, rgb(234, 0, 172) 100%);
+	}
+	
+	.square-pink:active {
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255, 71, 206)), color-stop(1, rgb(234, 0, 172)));
+		background : -moz-linear-gradient(center top, rgb(255, 71, 206) 25%, rgb(234, 0, 172) 100%);
+	}
+		
+	.square-shade {
+		display: inline-block;
+		position: absolute;
+		width: 60px;
+		height: 30px;
+		margin-top: 2px;
+		background: rgba(255, 255,255, .2);
+		-webkit-border-radius: 5px;
+		-webkit-border-bottom-right-radius: 0px;
+		-webkit-border-bottom-left-radius: 0px;
+		-moz-border-radius: 5px;
+		-moz-border-radius-bottomright: 0px;
+		-moz-border-radius-bottomleft: 0px;
+		border-radius: 5px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+		
+	.square-inner {
+		display: inline-block;
+		width: 60px;
+		height: 43px;
+		padding-top: 25%;
+		font-size: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-top: 1px solid rgba(255, 255, 255, 0.7);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		color: #fff;
+		text-shadow: 0px 1px 0px #6c0909;
+	}
+		
+/* Badges */
+
+.badges-ssiddique {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 365px;
+	height: 214px;
+	background: url('images/ssiddique.png');
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+	
+	.badges-inner-left {
+		position: absolute;
+		left: -3.7em;
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+		background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+		padding-top: 1px;
+		height: 40px;
+		width: 200px;
+		font-size: 20px;
+		color: #fff;
+		text-shadow: 0px 1px 0px #6c0909;
+		-webkit-transform: rotate(-40deg);
+		-moz-transform: rotate(-40deg);
+		-webkit-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+		-moz-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+		box-shadow:  0px 1px 2px rgba(0,0,0, 0.5);
+	}
+	
+	.badges-inner-right {
+		position: absolute;
+		right: -3em;
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(255,71,71)), color-stop(1, rgb(200,17,17)));
+		background : -moz-linear-gradient(center top, rgb(255,71,71) 25%, rgb(200,17,17) 100%);
+		padding-top: 1px;
+		height: 70px;
+		width: 200px;
+		font-size: 20px;
+		color: #fff;
+		-webkit-transform: rotate(40deg);
+		-moz-transform: rotate(40deg);
+		-webkit-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+		-moz-box-shadow: 0px 1px 2px rgba(0,0,0, 0.5);
+		box-shadow:  0px 1px 2px rgba(0,0,0, 0.5);
+		text-shadow: 0px 1px 0px #6c0909;
+	}
+		
+		.badges-text {
+			border-top: 1px solid rgba(255, 255, 255, 0.7);
+			padding-top: 9px;
+		}
+		
+/* Music Player */
+
+.music-player {
+	font-family: Arial, Helvetica;
+	display: inline-block;
+	width: 600px;
+	height: 100px;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(201,201,201)), color-stop(1, rgb(128,132,135)));
+	background : -moz-linear-gradient(center top, rgb(201,201,201) 25%, rgb(128,132,135) 100%);
+	position: relative;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0, 0.8);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0, 0.8);
+	box-shadow:  0px 1px 2px rgba(0,0,0, 0.8);
+}
+	
+	.music-player-inner {
+		display: inline-block;
+		width: 600px;
+		height: 100px;
+		padding-top: 3.5%;
+		font-size: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-top: 1px solid rgba(255, 255, 255, 0.6);
+	}
+	
+	.music-player-toggle {
+		margin-left: 1em;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+		-webkit-box-shadow: 1px 5px 0px rgba(255,255,255, 0.6);
+		-moz-box-shadow: 1px 5px 0px rgba(255,255,255, 0.6);
+		box-shadow: 1px 5px 0px rgba(255,255,255, 0.6);
+	}
+	
+		.music-player-toggle-inner {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(252,252,252)), color-stop(1, rgb(128,132,135)));
+			background : -moz-linear-gradient(center top, rgb(252,252,252) 25%, rgb(128,132,135) 100%);
+			font-weight: bold;
+			font-size: 38px;
+			-webkit-border-radius: 30px;
+			-moz-border-radius: 30px;
+			border-radius: 30px;
+			border: 2px solid #696b6b;
+			text-align: center;
+		}
+	
+	.music-player-music {
+		margin-left: 2em;
+		display: inline-block;
+		width: 450px;
+		height: 50px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background : -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgb(227,233,195)), color-stop(1, rgb(198,218,149)));
+		background : -moz-linear-gradient(center top, rgb(227,233,195) 25%, rgb(198,218,149) 100%);
+		border-top: 1px solid rgba(255, 255, 255, 0.6);
+		-webkit-box-shadow: 0px -2px 1px rgba(0,0,0, 0.4);
+		-moz-box-shadow: 0px -2px 1px rgba(0,0,0, 0.4);
+		box-shadow: 0px -2px 1px rgba(0,0,0, 0.4);
+		position: relative;
+	}
+	
+	.music-player-music-inner {	
+		display: inline-block;
+		width: 450px;
+		height: 42px;
+		padding-top: 2%;
+		font-size: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	}
+		
+	.music-player-shade {
+		top: 0;
+		display: inline-block;
+		position: absolute;
+		width: 450px;
+		height: 25px;
+		background: rgba(255, 255,255, .2);
+	}
+	
+	.music-player-content {
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: -.08em;
+	}
+	
+	.music-player-slider {
+		margin-top: .5em;
+		display: inline-block;
+		width: 350px;
+		height: 9px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		background: #a9b096;
+		-webkit-box-shadow: 0px -1px 0px rgba(0,0,0, 0.4);
+		-moz-box-shadow: 0px -1px 0px rgba(0,0,0, 0.4);
+		box-shadow: 0px -1px 0px rgba(0,0,0, 0.4);
+	}
+	

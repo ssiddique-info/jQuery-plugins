@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Create Groovershark-like Slider </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {				
+				$('#the-next').click(function() {
+					
+					slider			= $('#slider');
+					selectedItems	= slider.children('li.selected');
+					nextItem			= selectedItems.next('li');
+					nextItemImg		= nextItem.children('img');
+										
+					nextItemIndex	= nextItem.index() - 1;
+					nextItemPos		= 236 * nextItemIndex;
+					nextItemPos 	= -nextItemPos+'px';
+					
+					if(nextItem.is('li')) {
+						
+						slider.animate({"marginLeft" : nextItemPos});
+					
+						selectedItems.removeClass('selected');
+						nextItem.addClass('selected');
+						
+						$('#the-title').fadeOut(100, function() {
+							$(this).text(nextItemImg.attr('alt')).fadeIn();
+						});
+					}
+					
+				});
+				
+				$('#the-prev').click(function() {
+					
+					slider			= $('#slider');
+					selectedItems	= slider.children('li.selected');
+					prevItem			= selectedItems.prev('li');
+					prevItemImg		= prevItem.children('img');
+					
+					prevItemIndex	= prevItem.index() - 1;
+					prevItemPos		= 236 * -prevItemIndex;
+					prevItemPos 	= prevItemPos+'px';
+
+					if(prevItem.is('li')) {
+						slider.animate({"marginLeft" : prevItemPos});
+					
+						selectedItems.removeClass('selected');
+						prevItem.addClass('selected');
+						
+						$('#the-title').fadeOut(100, function() {
+							$(this).text(prevItemImg.attr('alt')).fadeIn();
+						});
+					}
+				});
+
+				
+			});
+			
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div id="container">
+	<div id="content">
+		<div id="top">
+			<img src="images/jquery_06.png" class="items" />
+			<img src="images/jquery_08.png" class="items" />
+			<img src="images/jquery_03.png" class="items" />
+		</div>
+		<div id="bottom">
+			<ul id="slider">
+				<li class="images"><img src="images/checkbox.png" alt="Stylize Your Own Checkboxes" /></li>
+				<li class="images"><img src="images/confirm.png" alt="jQuery Plugin : jConfirmAction" /></li>
+				<li class="images selected"><img src="images/css-position.png" alt="Engage 2 CSS Positions : Relative & Absolute" /></li>
+				<li class="images"><img src="images/label.png" alt="Mask Your Input Forms and Make It Beauty" /></li>
+				<li class="images"><img src="images/ui.png" alt="Free Stuff : Web User Interface Element Pack" /></li>
+				<li class="images"><img src="images/animated.png" alt="Create Animated Navigation Menu From Stratch" /></li>
+				<li class="images"><img src="images/iphone.png" alt="iPhone-Style Navigation:AJAX + Rotate (Part II)" /></li>
+				<li class="images"><img src="images/css-position.png" alt="Engage 2 CSS Positions : Relative & Absolute" /></li>
+				<li class="images"><img src="images/label.png" alt="Mask Your Input Forms and Make It Beauty" /></li>
+				<li class="images"><img src="images/ui.png" alt="Free Stuff : Web User Interface Element Pack" /></li>
+				<li class="images"><img src="images/animated.png" alt="Create Animated Navigation Menu From Stratch" /></li>
+			</ul>
+		</div>
+		<br/>
+		<span id="the-title">Engage 2 CSS Positions : Relative & Absolute</span><br/>
+		<span id="the-prev"><img src="images/prev.png" alt="prev" /></span>
+		<span id="the-next"><img src="images/next.png" alt="next" /></span>
+		<br/><br/>
+	</div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>
+</html>

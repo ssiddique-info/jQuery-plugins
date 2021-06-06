@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>[Code Snippet] jQuery : Checkbox & Table </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('input[type=checkbox]').click(function() {
+					
+					thisCheckbox	= $(this);
+					
+					if(thisCheckbox.attr('checked')) 
+						thisCheckbox.attr('checked', '');
+					else
+						thisCheckbox.attr('checked', 'checked');
+				});
+				
+				$('table tr').click(function() {
+					
+					checkBox = $(this).children('td').children('input[type=checkbox]');
+					
+					if(checkBox.attr('checked'))
+						checkBox.attr('checked', '');
+					else
+						checkBox.attr('checked', 'checked');
+				});
+				
+				$('.check-all').click(function() {
+					
+					checkBox	= $('table tr').children('td').children('input[type=checkbox]');
+					
+					if($(this).attr('checked')) 
+						checkBox.attr('checked', 'checked');
+					else
+						checkBox.attr('checked', '');		
+				});
+				
+			});
+			
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+	<p class="title">jQuery : Checkbox & Table</p>
+	<table>
+		<tr>
+			<th><input type="checkbox" class="check-all" /></th>
+			<th class="col-name">Name</th>
+			<th class="col-comment">Comment</th>
+			<th class="col-response">In Response To</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" /></td>
+			<td class="col-name">
+				<strong>waterbomm</strong><br/>
+				waterbomm.web.id/blog<br/>
+				117.102.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				bisa gw terapin untuk map yang gw buat gak ya, tapi harus ada parameternya untuk generate mapnya.. hiks..
+			</td>
+			<td class="col-response">
+			TinyTips : Another jQuery Plugin for Tooltip
+			</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" /></td>
+			<td class="col-name">
+				<strong>konyan</strong><br/>
+				ndakado<br/>
+				121.58.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				ko jadi gampang yea... sok tau mode ON.. hahaha
+			</td>
+			<td class="col-response">
+				EZ-CSS : Create Layout in No Time
+			</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" /></td>
+			<td class="col-name">
+				<strong>aduh</strong><br/>
+				116.xxx.xxx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				saia juga kurang begitu yakin klo yg nulis ini mengerti, wkwkwkwk..
+			</td>
+			<td class="col-response">
+				[Code Snippet] Wordpress : Current Week Post
+			</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" /></td>
+			<td class="col-name">
+				<strong>ocha</strong><br/>
+				neng-ocha.com<br/>
+				114.xx.xx.xxx<br/>
+			</td>
+			<td class="col-comment">
+				<em>Submitted on 2010/02/22 at 10:25pm</em><br/>
+				kewl!! +1 like this! :D
+			</td>
+			<td class="col-response">
+				iPhone-Style Navigation:AJAX + Rotate (Part II)
+			</td>
+		</tr>
+	</table>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>How To Create iPhone Style Navigation </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				defaultWidth	= 247; //pixels
+				transition		= 500; //millisecond
+				
+				function resetMargin(width) {
+						
+					divLeftMargin	= 0;
+				
+					$('.additional-block').each(function() {
+						
+						thisLeftMargin	= divLeftMargin + 'px';
+						
+						$(this).css('margin-left', thisLeftMargin);
+						
+						divLeftMargin	= divLeftMargin + width;
+						
+					});
+				}
+				
+				resetMargin(defaultWidth);
+				
+				$('.menu a').each(function() {
+					
+					thisHref	= $(this).attr('href');
+					
+					if($(thisHref).length > 0) {
+						$(this).addClass('has-child');
+					}
+					
+				});
+				
+				$('.menu a').click(function(event) {
+					
+					event.preventDefault();
+					
+					selectedDiv			= $(this).attr('href');
+					selectedMargin		= $(selectedDiv).css('margin-left');
+					selectedParent		= $(this).parents('.additional-block');
+					sliderMargin		= $('.slider').css('margin-left');
+					slidingMargin		= (parseInt(sliderMargin) - defaultWidth) + 'px';
+					
+					
+					if(selectedMargin.length > 0) {
+						
+						$(selectedDiv).children('.header').prepend('<span class="back"></span>').bind('click', function () {
+					
+							selectedParent	= $(this).parents('.additional-block');
+							sliderMargin	= - (parseInt(selectedParent.css('margin-left')) - defaultWidth) + 'px';
+							$('.slider').animate({marginLeft: sliderMargin}, transition);
+							
+						});
+							
+						if((parseInt(selectedMargin) - defaultWidth) >= defaultWidth) {
+						
+							selectedParent.after($(selectedDiv));
+							
+							resetMargin(defaultWidth);
+						
+							$('.slider').animate({marginLeft: slidingMargin}, transition);
+						
+						} else {
+						
+							$('.slider').animate({marginLeft: slidingMargin}, transition);
+					
+						}
+					}
+				});
+				
+			});
+		</script>
+</head>
+<body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="info">
+How to create iPhone style navigation<br/><br/><br/>
+</div>
+<div id="container">
+	<div class="binder">
+		<div class="slider">
+			<div id="start" class="additional-block">
+				<div class="header">
+					Indonesian Super League
+				</div>
+				<ul class="menu">
+					<li><a href="#arema">Arema Malang</a></li>
+					<li><a href="#persebaya">Persebaya Surabaya</a></li>
+					<li><a href="#persib">Persib Bandung</a></li>
+					<li><a href="#persija">Persija Jakarta</a></li>
+					<li><a href="#persipura">Persipura Jayapura</a></li>
+					<li><a href="#sriwijaya">Sriwijaya FC</a></li>
+				</ul>
+			</div>
+			<div id="arema" class="additional-block">
+				<div class="header">
+					Arema Malang
+				</div>
+				<ul class="menu">
+					<li><a href="#markus">Markus Horison</a></li>
+					<li><a href="#roman">Roman Chmelo</a></li>
+					<li><a href="#alamshah">Noh Alam Shah</a></li>
+					<li><a href="#pierre">Pierre Njanka</a></li>
+					<li><a href="#fakhrudin">Moch Fakhrudin</a></li>
+				</ul>
+			</div>
+			<div id="persebaya" class="additional-block">
+				<div class="header">
+					Persebaya Surabaya
+				</div>
+				<ul class="menu">
+					<li><a href="#korinus">Korinus Fingkreuw</a></li>
+					<li><a href="#andioddang">Andi Oddang</a></li>
+					<li><a href="#joshmaguire">Josh Maguire</a></li>
+					<li><a href="#takatoshi">Takatoshi Uchida</a></li>
+					<li><a href="#johntakpor">John Tarkpor</a></li>
+				</ul>
+			</div>
+			<div id="persib" class="additional-block">
+				<div class="header">
+					Persib Bandung
+				</div>
+				<ul class="menu">
+					<li><a href="#gonzales">Christian Gonzales</a></li>
+					<li><a href="#suchao">Suchao Nutnum</a></li>
+					<li><a href="#budi">Budi Sudarsono</a></li>
+					<li><a href="#nova">Nova Arianto</a></li>
+					<li><a href="#maman">Maman Abdurahman</a></li>
+					<li><a href="#atep">Atep</a></li>
+				</ul>
+			</div>
+			<div id="persija" class="additional-block">
+				<div class="header">
+					Persija Jakarta
+				</div>
+				<ul class="menu">
+					<li><a href="#bp">Bambang Pamungkas</a></li>
+					<li><a href="#aliyudin">Aliyudin</a></li>
+					<li><a href="#musyafry">T.A. Muyafry</a></li>
+					<li><a href="#baihakki">Baihakki Khaizan</a></li>
+					<li><a href="#abanda">Abanda Herman</a></li>
+					<li><a href="#mustafic">Mustafic Fahrudin</a></li>
+					<li><a href="#firman">Firman Utina</a></li>
+				</ul>
+			</div>
+			<div id="persipura" class="additional-block">
+				<div class="header">
+					Persipura Jayapura
+				</div>
+				<ul class="menu">
+					<li><a href="#boaz">Boaz Salossa</a></li>
+					<li><a href="#goncalves">Alberto Goncalves</a></li>
+					<li><a href="#kabes">Ian Louis Kabes</a></li>
+					<li><a href="#hendra">Hendra Ridwan</a></li>
+					<li><a href="#erol">Erol Iba</a></li>
+					<li><a href="#igbonefo">Victor Igbonefo</a></li>
+				</ul>
+			</div>
+			<div id="sriwijaya" class="additional-block">
+				<div class="header">
+					Sriwijaya FC
+				</div>
+				<ul class="menu">
+					<li><a href="#ponaryo">Ponaryo Astaman</a></li>
+					<li><a href="#arif">Arif Suyono</a></li>
+					<li><a href="#isnan">Isnan Ali</a></li>
+					<li><a href="#zahrahan">Zah Rahan</a></li>
+					<li><a href="#gumbs">Keith Kayamba Gumbs</a></li>
+					<li><a href="#obiora">Richard Obiora</a></li>
+				</ul>
+			</div>
+			<div id="markus" class="additional-block">
+				<div class="header">
+					Markus Horison
+				</div>
+				<ul class="menu">
+					<li><a href="#markus-photo">Photo</a></li>
+					<li><a href="#markus-biodata">Biodata</a></li>
+				</ul>
+			</div>
+			<div id="markus-photo" class="additional-block">
+				<div class="header">
+					Markus Horison's Photo
+				</div>
+				<p align="center">
+					<img src="images/Markus.png" />
+				</p>
+			</div>
+			<div id="markus-biodata" class="additional-block">
+				<div class="header">
+					Markus Horison's Biodata
+				</div>
+				<p class="biodata">
+					<strong>Name :</strong><br/>
+					Markus Horison / Markus Haris Maulana<br/>
+					<strong>Position :</strong><br/>
+					Goalkeeper<br/>
+					<strong>Date of Birth :</strong><br/>
+					March 14, 1981<br/>
+				</p>
+			</div>
+			<div id="roman" class="additional-block">
+				<div class="header">
+					Roman Chmelo
+				</div>
+				<p align="center">
+					<img src="images/Roman.png" />
+				</p>
+			</div>
+			<div id="bp" class="additional-block">
+				<div class="header">
+					Bambang Pamungkas
+				</div>
+				<p align="center">
+					<img src="images/BP.png" />
+				</p>
+			</div>
+			<div id="baihakki" class="additional-block">
+				<div class="header">
+					Baihakki Khaizan
+				</div>
+				<p align="center">
+					<img src="images/Baihakki.png" />
+				</p>
+			</div>
+			<div id="boaz" class="additional-block">
+				<div class="header">
+					Boaz Salossa
+				</div>
+				<p align="center">
+					<img src="images/Boaz.png" />
+				</p>
+			</div>
+			<div id="goncalves" class="additional-block">
+				<div class="header">
+					Alberto Goncalves
+				</div>
+				<p align="center">
+					<img src="images/Goncalves.png" />
+				</p>
+			</div>
+			<div id="suchao" class="additional-block">
+				<div class="header">
+					Suchao Nutnum
+				</div>
+				<p align="center">
+					<img src="images/Suchao.png" />
+				</p>
+			</div>
+			<div id="atep" class="additional-block">
+				<div class="header">
+					Atep
+				</div>
+				<p align="center">
+					<img src="images/Atep.png" />
+				</p>
+			</div>
+			<div id="korinus" class="additional-block">
+				<div class="header">
+					Korinus Fingkreuw
+				</div>
+				<p align="center">
+					<img src="images/Korinus.png" />
+				</p>
+			</div>
+			<div id="takatoshi" class="additional-block">
+				<div class="header">
+					Takatoshi Uchida
+				</div>
+				<p align="center">
+					<img src="images/Takatoshi.png" />
+				</p>
+			</div>
+			<div id="ponaryo" class="additional-block">
+				<div class="header">
+					Ponaryo Astaman
+				</div>
+				<p align="center">
+					<img src="images/Ponaryo.png" />
+				</p>
+			</div>
+			<div id="arif" class="additional-block">
+				<div class="header">
+					Arif Suyono
+				</div>
+				<p align="center">
+					<img src="images/Arif.png" />
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8810347615083175"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8810347615083175"
+     data-ad-slot="9435784898"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187022639-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-187022639-1');
+</script>
+</body>
